@@ -163,3 +163,58 @@ body {
 .wishlist-btn:hover {
     opacity: 0.85;
 }
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+    background: #ffffff;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+#contactForm {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+#contactForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: none;
+    border-color: #00bcd4;
+}
+
+#contactForm button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #00bcd4;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    opacity: 0.85;
+}
