@@ -14,3 +14,12 @@ searchBtn.addEventListener("click", function () {
         alert("Searching for: " + searchText);
     }
 });
+// Add to Cart functionality
+
+const cartButtons = document.querySelectorAll(".cart-btn");
+
+cartButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+        alert("Product added to cart!");
+    });
+});
