@@ -40,3 +40,36 @@ wishlistButtons.forEach(function (button) {
         }
     });
 });
+// Product category filtering
+
+const categoryButtons = document.querySelectorAll(".categories button");
+const productCards = document.querySelectorAll(".product-card");
+
+categoryButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+        const category = button.textContent.trim();
+
+        productCards.forEach(function (card) {
+            const productName = card.querySelector("h3").textContent.toLowerCase();
+
+            if (category === "All") {
+                card.style.display = "block";
+            } 
+            else if (
+                category === "Electronics" &&
+                (productName.includes("watch") || productName.includes("headphones"))
+            ) {
+                card.style.display = "block";
+            } 
+            else if (
+                category === "Accessories" &&
+                productName.includes("backpack")
+            ) {
+                card.style.display = "block";
+            } 
+            else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
