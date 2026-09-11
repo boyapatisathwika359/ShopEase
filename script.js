@@ -73,3 +73,23 @@ categoryButtons.forEach(function (button) {
         });
     });
 });
+// Contact form validation
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || phone === "" || message === "") {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    alert("Thank you! Your message has been submitted.");
+    contactForm.reset();
+});
