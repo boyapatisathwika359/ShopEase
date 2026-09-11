@@ -23,3 +23,20 @@ cartButtons.forEach(function (button) {
         alert("Product added to cart!");
     });
 });
+// Wishlist functionality
+
+const wishlistButtons = document.querySelectorAll(".wishlist-btn");
+
+wishlistButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+        const isAdded = button.dataset.added === "true";
+
+        button.dataset.added = String(!isAdded);
+
+        if (isAdded) {
+            button.textContent = "♡ Add to Wishlist";
+        } else {
+            button.textContent = "♥ Added to Wishlist";
+        }
+    });
+});
